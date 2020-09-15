@@ -4,4 +4,3 @@
 *.idea
 !.idea
 venv/
-将删除 .gitignore
