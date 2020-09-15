@@ -1,4 +1,5 @@
 import requests, random, json, os, time, re
+
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=词语&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=43230&rn=30&cb=jQuery110203961505524456099_1600140071363&_=1600140071373
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=%E8%AF%8D%E8%AF%AD&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=90&rn=30&cb=jQuery110203961505524456099_1600140071377&_=1600140071383
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=三字词语&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=190&rn=38&cb=jQuery110203961505524456099_1600140071377&_=1600140071392
@@ -9,6 +10,7 @@ headers = {
 }
 
 https = "https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query={}&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn={}&rn={}&cb=jQuery110203961505524456099_1600140071377&_=1600140071392"
+
 
 def get_word(search_word, position, num):
     try:
@@ -25,7 +27,8 @@ def get_word(search_word, position, num):
             word_list.append(word_link["ename"])
         return word_list, list_num
     except Exception as ex:
-        return 0,[]
+        return 0, []
+
 
 def get_all_word(search_word):
     start_position = 0
@@ -46,20 +49,36 @@ def baocuncihui(search_word):
         random.shuffle(all_word_list)
         for position, word in enumerate(all_word_list):
             file.write("{}/{}.{}\n".format(position // 30 + 1, position % 30 + 1, word))
-            if (position+1) % 30 == 0:
+            if (position + 1) % 30 == 0:
                 file.write("\n")
+
 
 def get_all_ci():
     word_2_ci = get_all_word("二字词")
-    word_2_ci = random.shuffle(word_2_ci)
+    random.shuffle(word_2_ci)
     word_3_ci = get_all_word("三字词")
-    word_3_ci = random.shuffle(word_3_ci)
+    random.shuffle(word_3_ci)
     word_4_ci = get_all_word("四字词")
-    word_4_ci = random.shuffle(word_4_ci)
+    random.shuffle(word_4_ci)
     word_5_ci = get_all_word("五字词")
-    word_5_ci = random.shuffle(word_5_ci)
+    random.shuffle(word_5_ci)
     word_6_ci = get_all_word("六字词")
-    word_6_ci = random.shuffle(word_6_ci)
+    random.shuffle(word_6_ci)
+
+    with open("../阶梯词汇.txt", "w", encoding="utf-8") as file:
+        position = 0
+        for word_2, word_3, word_4, word_5, word_6 in zip(word_2_ci, word_3_ci, word_4_ci, word_5_ci, word_6_ci):
+            zong_xuhao = (position // 2) + 1
+            if position % 2 == 0:
+                xuhao = [1, 2, 3, 4, 5]
+            else:
+                xuhao = [6, 7, 8, 9, 10]
+            print_word = "{}/{}.{}\n{}/{}.{}\n{}/{}.{}\n{}/{}.{}\n{}/{}.{}\n".format(zong_xuhao, xuhao[0], word_2, zong_xuhao, xuhao[1], word_3, zong_xuhao, xuhao[2],
+                                                                      word_4, zong_xuhao, xuhao[3], word_5, zong_xuhao, xuhao[4], word_6)
+            file.write(print_word)
+            if position % 2 == 1:
+                file.write("\n")
+            position += 1
 
 
 if __name__ == "__main__":
