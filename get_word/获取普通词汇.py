@@ -1,8 +1,11 @@
-import requests, random, json, os, time, re
+
 
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=词语&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=43230&rn=30&cb=jQuery110203961505524456099_1600140071363&_=1600140071373
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=%E8%AF%8D%E8%AF%AD&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=90&rn=30&cb=jQuery110203961505524456099_1600140071377&_=1600140071383
 # https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?resource_id=28204&from_mid=1&&format=json&ie=utf-8&oe=utf-8&query=三字词语&sort_key=&sort_type=1&stat0=&stat1=&stat2=&stat3=&pn=190&rn=38&cb=jQuery110203961505524456099_1600140071377&_=1600140071392
+
+import requests, random, json, os, time, re
+from bs4 import BeautifulSoup
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",

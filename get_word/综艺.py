@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 url = "https://v.qq.com/x/bu/pagesheet/list?_all=1&append=1&channel=variety&listpage=2&offset={}&pagesize={}&sort=4"
 url2 = "https://v.qq.com/x/bu/pagesheet/list?_all=1&append=1&channel=variety&listpage=2&offset=150&pagesize=30&sort=4"
-url3_dianshiju = "https://v.qq.com/x/bu/pagesheet/list?_all=1&append=1&channel=tv&listpage=2&offset={}&pagesize={}&sort=16"
+url3_dianshiju = "https://v.qq.com/x/bu/pagesheet/list?_all=1&append=1&channel=movie&listpage=2&offset={}&pagesize={}&sort=18"
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
     "Referer": "https://v.qq.com/channel/variety?"
@@ -49,7 +49,7 @@ def find_all_zongyi():
     offset = 0
     pagesize = 30
     all_zongyi_list = []
-    while offset < 2000:
+    while offset < 7000:
         zongyi_list = find_dianying(offset, pagesize)
         print(zongyi_list)
         if not zongyi_list:
@@ -57,7 +57,7 @@ def find_all_zongyi():
         all_zongyi_list.extend(zongyi_list)
         offset += pagesize
     print(all_zongyi_list)
-    random.shuffle(all_zongyi_list)
-    baocuncihui("电视剧2", all_zongyi_list)
+    # random.shuffle(all_zongyi_list)
+    baocuncihui("最近热播排序", all_zongyi_list)
 
 find_all_zongyi()
