@@ -29,10 +29,13 @@ word_tag_link_dict = {
     "电影":"http://top.baidu.com/buzz?b=26&c=1&fr=topbuzz_b26_c1",
     "电视剧":"http://top.baidu.com/buzz?b=4&c=2&fr=topcategory_c2",
     "综艺":"http://top.baidu.com/buzz?b=19&c=3&fr=topcategory_c3",
-    "动漫":"http://top.baidu.com/buzz?b=23&c=5&fr=topcategory_c5",
-    "动画片":"http://top.baidu.com/buzz?b=1677&c=536&fr=topcategory_c536",
     "纪录片":"http://top.baidu.com/buzz?b=1678&c=537&fr=topcategory_c537",
     "小说":"http://top.baidu.com/buzz?b=7&fr=topbuzz_b1678_c537"
+}
+
+donghua_dict = {
+    "动漫": "http://top.baidu.com/buzz?b=23&c=5&fr=topcategory_c5",
+    "动画片": "http://top.baidu.com/buzz?b=1677&c=536&fr=topcategory_c536"
 }
 
 youxi_dict = {
@@ -112,6 +115,11 @@ def baocuncihui(file_name, all_word_list, num=10):
             if (position + 1) % num == 0:
                 file.write("\n")
 
+def baocuncihui_no_fenzu(file_name, all_word_list):
+    with open("./没有分组/{}.txt".format(file_name), "w", encoding="utf-8") as file:
+        for position, word in enumerate(all_word_list):
+            file.write("{}\n".format(word))
+
 # 获取榜单链接
 def get_mulu_list():
     r = requests.get(mulu_url, headers=headers)
@@ -145,18 +153,23 @@ def get_save_dict_word(file_name, dict):
         random.shuffle(word_list)
         all_word_list.extend(word_list)
     random.shuffle(all_word_list)
-    baocuncihui(file_name,all_word_list)
+    all_word_list = list(set(all_word_list))
+    # baocuncihui(file_name,all_word_list)
+    baocuncihui_no_fenzu(file_name, all_word_list)
 
 def save_word_key_value(word_dict):
     for key, url in word_dict.items():
         word_list = get_word_list(url)
         random.shuffle(word_list)
-        baocuncihui(key, word_list)
+        # baocuncihui(key, word_list)
+        word_list = list(set(word_list))
+        baocuncihui_no_fenzu(key, word_list)
 
 
 def get_word_from_dict():
     save_word_key_value(word_tag_link_dict)
     save_word_key_value(shenghuo_dict)
+    get_save_dict_word("动画", donghua_dict)
     get_save_dict_word("游戏", youxi_dict)
     get_save_dict_word("人物", people_dict)
     get_save_dict_word("汽车", car_dict)
@@ -164,7 +177,51 @@ def get_word_from_dict():
     get_save_dict_word("旅游", lvyou_dict)
 
 
+
+class FileUtils:
+    @staticmethod
+    def read_line(file_name, is_return_none=False):
+        if os.path.exists(file_name):
+            for line in open(file_name):
+                line = line.strip()
+                if line:
+                    yield line
+                else:
+                    if is_return_none:
+                        yield line
+        else:
+            return []
+
+def is_can_add(word:str):
+    import re
+    return not bool(re.search('[A-Za-z]', word))
+
+def stat_word_num():
+    wenjian_path = "./没有分组/"
+    word_dict = {}
+    for file_name in os.listdir(wenjian_path):
+        file_path = wenjian_path + file_name
+        zhuti_name = file_name.split(".")[0]
+        word_list = []
+        for line in FileUtils.read_line(file_path):
+            if is_can_add(line):
+                word_list.append(line)
+        print("{} 的数目:{}".format(zhuti_name, len(word_list)))
+        word_dict[zhuti_name] = word_list
+    tag_list = ["旅游", "小吃", "综艺", "汽车", "化妆品", "动画", "宠物", "小说", "人物", "畅销书", "电影", "电视剧", "纪录片", "游戏", "高校"]
+    all_word_list = []
+    for i in range(46):
+        word_list = []
+        for tag in tag_list:
+            word_list.append(word_dict[tag][i])
+        all_word_list.extend(word_list)
+    baocuncihui("分组词", all_word_list, len(tag_list))
+
+    # print(word_dict)
+
+
 if __name__ == "__main__":
+    stat_word_num()
     # get_mulu_list()
     # print(get_word_list())
-    get_word_from_dict()
+    # get_word_from_dict()
