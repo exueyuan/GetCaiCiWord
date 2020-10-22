@@ -1,0 +1,192 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>俗语有哪些</title>
+    <meta name="keywords" content="俗语大全">
+    <meta name="Description" content="俗语大全-常用俗语的意思及例子英语翻译,俗语有哪些"><link href='/css/base.css' type='text/css' rel='stylesheet' />
+<link href='/css/main.css' type='text/css' rel='stylesheet' />
+<link href='/css/detail.css' type='text/css' rel='stylesheet' />
+<link href='/css/nav.css' type='text/css' rel='stylesheet' />
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/cycommon.js"></script></head>
+  <body class="index"><div class="wrapper" id="header">
+	<div class="logoArea1" style="display:none">
+
+     </div>
+    <div class="hr_10"></div>
+    <div class="navbox_new">
+    	<div id="tag_nav" class="tag_nav">
+        	<span class="tag_nav_1" onMouseDown="changecurclass('0');"><a href="/">俗语大全</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('1');"><a href="/changyong/">常用俗语</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('2');"><a href="/changyong/index4.shtml">英语俗语</a></span>
+            <span class="tag_nav_1" onMouseDown="changecurclass('3');"><a href="http://www.trueloveshop.cn/xiehouyu/shengxiao.shtml" rel="nofollow">十二生肖歇后语</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('4');"><a href="http://www.trueloveshop.cn/chengyugushi/" rel="nofollow">成语故事</a></span>
+        </div>
+        <div class="morelink" id="nav_con">
+        	<div>
+                <ul>
+                	<li>
+					<span class="nav_hot">热门俗语</span>
+                      <a href="/suyu/index1.shtml">家乡俗语汇总</a>
+					  <a href="/suyu/index2.shtml">关于母爱的俗语</a>
+					  <a href="/suyu/index3.shtml">描写自然风光的俗语</a>
+					  <a href="/suyu/index6.shtml">有关桥的俗语汇总</a>
+					  <a href="/suyu/index7.shtml">民间俗语</a>
+                      <a href="/suyu/index8.shtml">地方俗语</a>
+                      <a href="/suyu/index4.shtml">俗语歇后语大全</a>
+                      <a href="/suyu/index5.shtml">民间桥的俗语累积</a>
+                    </li>
+                </ul>　　　  　　
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hr_10"></div>
+
+
+<script type="text/javascript">
+    /// <reference path="/js/jquery-1.7.2.min.js" />
+
+    (function ($) {
+        $.fn.hoverDelay = function (fnOver, fnOut, timeIn, timeOut) {
+
+            var timeIn = timeIn || 300,
+                    timeOut = timeOut || 300,
+                    fnOut = fnOut || fnOver;
+
+            var inTimer = [], outTimer = [];
+
+            return this.each(function (i) {
+                $(this).mouseenter(function () {
+                    var that = this;
+                    clearTimeout(outTimer[i]);
+                    inTimer[i] = setTimeout(function () {
+                        fnOver.apply(that);
+                    }, timeIn);
+                }).mouseleave(function () {
+                    var that = this;
+                    clearTimeout(inTimer[i]);
+                    outTimer[i] = setTimeout(function () {
+                        fnOut.apply(that)
+                    }, timeOut);
+                });
+            })
+        };
+
+    })(jQuery);
+
+    function navTabs(tabTit2, tabCon2, on2) {
+        var _on = $(tabTit2).find('.' + on2);
+        var _i = $(tabTit2).children('span').index(_on[0]);
+        $(tabCon2).each(function () {
+            $(this).children('div').eq(_i).show();
+        });
+        $(tabTit2).children('span').hoverDelay(
+              function () {
+                  $(this).addClass(on2).siblings('span').removeClass(on2);
+                  var index = jQuery(tabTit2).children('span').index(this);
+                  $(tabCon2).children('div').eq(index).show('slow').siblings('div').hide('slow');
+
+              },
+            function () {
+
+            });
+          };
+          function changecurclass(i) {
+              $.Cookies.set("curindex", i);
+          }
+          function initcurclass() {
+              var cur = $.Cookies.get("curindex");
+              if (cur == null) {
+                  cur = 0;
+              }
+              else {
+                  cur = parseInt(cur);
+              }
+
+              $("#tag_nav span:eq(" + cur + ")").attr("class", "tag_nav_2");
+
+        }
+          initcurclass();
+          navTabs('#tag_nav', '#nav_con', 'tag_nav_2');
+</script><div class="wrapper">
+      <div id="homead" class="gkst_box"><div class="adbox">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 970x90x文字 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-8159566632417729"
+     data-ad-slot="4285006608"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+    </div>
+    <div class="hr_10"></div>
+    <div class="wrapper">
+      <h2 id="itemtitle" class="columnTit"><small class="right colf24118">
+          更多&gt;&gt;<a href="/changyong/index1.shtml">常用俗语</a></small><em id="moretxt" class="right clearfix col666"></em><span class="cye white"><b class="columnTitNav2_l left"></b><i class="columnTitNav2_m left"><a href="/">俗语大全</a></i><b class="columnTitNav2_r left"></b></span></h2>
+      <div class="left topMargin1">
+        <div id="listitems" class="borderLr znCon ffCon clearfix">
+          <ul class="clearfix listIcon2 col666">
+              <li><a href='/changyong/0.shtml'>有志者事竟成</a></li><li><a href='/changyong/1.shtml'>有话好好说</a></li><li><a href='/changyong/2.shtml'>问君能有几多愁</a></li><li><a href='/changyong/3.shtml'>团结就是力量</a></li><li><a href='/changyong/4.shtml'>天生我材必有用</a></li><li><a href='/changyong/5.shtml'>天若有情天亦老</a></li><li><a href='/changyong/6.shtml'>上阵父子兵</a></li><li><a href='/changyong/7.shtml'>满清十大酷刑</a></li><li><a href='/changyong/8.shtml'>浪子回头金不换</a></li><li><a href='/changyong/9.shtml'>家和万事兴</a></li><li><a href='/changyong/10.shtml'>大鱼吃小鱼</a></li><li><a href='/changyong/11.shtml'>最近比较烦</a></li><li><a href='/changyong/12.shtml'>纸上得来终觉浅</a></li><li><a href='/changyong/13.shtml'>知识就是力量</a></li><li><a href='/changyong/14.shtml'>欲速则不达</a></li><li><a href='/changyong/15.shtml'>犹抱琵琶半遮面</a></li><li><a href='/changyong/16.shtml'>衣带渐宽终不悔</a></li><li><a href='/changyong/17.shtml'>一枝红杏出墙来</a></li><li><a href='/changyong/18.shtml'>一物降一物</a></li><li><a href='/changyong/19.shtml'>一将功成万骨枯</a></li><li><a href='/changyong/20.shtml'>一个都不能少</a></li><li><a href='/changyong/21.shtml'>一寸光阴一寸金</a></li><li><a href='/changyong/22.shtml'>燕雀安知鸿鹄之志</a></li><li><a href='/changyong/23.shtml'>星星之火可以燎原</a></li><li><a href='/changyong/24.shtml'>心有灵犀一点通</a></li><li><a href='/changyong/25.shtml'>心急吃不了热豆腐</a></li><li><a href='/changyong/26.shtml'>挟天子以令诸侯</a></li><li><a href='/changyong/27.shtml'>小米加步枪</a></li><li><a href='/changyong/28.shtml'>相见时难别亦难</a></li><li><a href='/changyong/29.shtml'>西出阳关无故人</a></li><li><a href='/changyong/30.shtml'>五十步笑百步</a></li><li><a href='/changyong/31.shtml'>无可奈何花落去</a></li><li><a href='/changyong/32.shtml'>温故而知新</a></li><li><a href='/changyong/33.shtml'>唯恐天下不乱</a></li><li><a href='/changyong/34.shtml'>为伊消得人憔悴</a></li><li><a href='/changyong/35.shtml'>为人民服务</a></li><li><a href='/changyong/36.shtml'>天时地利人和</a></li><li><a href='/changyong/37.shtml'>水至清则无鱼</a></li><li><a href='/changyong/38.shtml'>谁动了我的奶酪</a></li><li><a href='/changyong/39.shtml'>树欲静而风不止</a></li><li><a href='/changyong/40.shtml'>书到用时方恨少</a></li><li><a href='/changyong/41.shtml'>十八层地狱</a></li><li><a href='/changyong/42.shtml'>十八般武艺</a></li><li><a href='/changyong/43.shtml'>失败是成功之母</a></li><li><a href='/changyong/44.shtml'>身无彩凤双飞翼</a></li><li><a href='/changyong/45.shtml'>社会主义好</a></li><li><a href='/changyong/46.shtml'>商女不知亡国恨</a></li><li><a href='/changyong/47.shtml'>山雨欲来风满楼</a></li><li><a href='/changyong/48.shtml'>三下五除二</a></li><li><a href='/changyong/49.shtml'>三七二十一</a></li><li><a href='/changyong/50.shtml'>三个臭皮匠</a></li><li><a href='/changyong/51.shtml'>瑞雪兆丰年</a></li><li><a href='/changyong/52.shtml'>人心不足蛇吞象</a></li><li><a href='/changyong/53.shtml'>千里之行始于足下</a></li><li><a href='/changyong/54.shtml'>贫贱夫妻百事哀</a></li><li><a href='/changyong/55.shtml'>赔了夫人又折兵</a></li><li><a href='/changyong/56.shtml'>女子无才便是德</a></li><li><a href='/changyong/57.shtml'>莫愁前路无知己</a></li><li><a href='/changyong/58.shtml'>明日复明日</a></li><li><a href='/changyong/59.shtml'>民以食为天</a></li><li><a href='/changyong/60.shtml'>每逢佳节倍思亲</a></li><li><a href='/changyong/61.shtml'>没事偷着乐</a></li><li><a href='/changyong/62.shtml'>路边的野花不要采</a></li><li><a href='/changyong/63.shtml'>柳暗花明又一村</a></li><li><a href='/changyong/64.shtml'>临兵斗者皆阵列在前</a></li><li><a href='/changyong/65.shtml'>空手套白狼</a></li><li><a href='/changyong/66.shtml'>可怜天下父母心</a></li><li><a href='/changyong/67.shtml'>苛政猛于虎</a></li><li><a href='/changyong/68.shtml'>君子之交淡如水</a></li><li><a href='/changyong/69.shtml'>今朝有酒今朝醉</a></li><li><a href='/changyong/70.shtml'>过把瘾就死</a></li><li><a href='/changyong/71.shtml'>桂林山水甲天下</a></li><li><a href='/changyong/72.shtml'>工欲善其事必先利其器</a></li><li><a href='/changyong/73.shtml'>高处不胜寒</a></li><li><a href='/changyong/74.shtml'>富贵不能淫</a></li><li><a href='/changyong/75.shtml'>肥水不流外人田</a></li><li><a href='/changyong/76.shtml'>二桃杀三士</a></li><li><a href='/changyong/77.shtml'>道不同不相为谋</a></li><li><a href='/changyong/78.shtml'>打破沙锅问到底</a></li><li><a href='/changyong/79.shtml'>此地无银三百两</a></li><li><a href='/changyong/80.shtml'>船到桥头自然直</a></li><li><a href='/changyong/81.shtml'>出淤泥而不染</a></li><li><a href='/changyong/82.shtml'>吃一堑长一智</a></li><li><a href='/changyong/83.shtml'>不是冤家不聚头</a></li><li><a href='/changyong/84.shtml'>不识庐山真面目</a></li><li><a href='/changyong/85.shtml'>冰冻三尺非一日之寒</a></li><li><a href='/changyong/86.shtml'>杯酒释兵权</a></li><li><a href='/changyong/87.shtml'>霸王硬上弓</a></li><li><a href='/changyong/88.shtml'>哀莫大于心死</a></li><li><a href='/changyong/89.shtml'>做一天和尚撞一天钟</a></li><li><a href='/changyong/90.shtml'>朱门酒肉臭</a></li><li><a href='/changyong/91.shtml'>众人拾柴火焰高</a></li><li><a href='/changyong/92.shtml'>置之死地而后生</a></li><li><a href='/changyong/93.shtml'>只愿君心似我心</a></li><li><a href='/changyong/94.shtml'>只缘身在此山中</a></li><li><a href='/changyong/95.shtml'>宰相肚里能撑船</a></li><li><a href='/changyong/96.shtml'>欲穷千里目</a></li><li><a href='/changyong/97.shtml'>语不惊人死不休</a></li><li><a href='/changyong/98.shtml'>有缘千里来相会</a></li><li><a href='/changyong/99.shtml'>有情人终成眷属</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hr_10"></div><div style="text-align:center;">
+<a href="/changyong/">1</a> <a href="/changyong/index1.shtml">2</a> <a href="/changyong/index2.shtml">3</a> <a href="/changyong/index3.shtml">4</a> <a href="/changyong/index4.shtml">5</a> <a href="/changyong/index5.shtml">6</a> <a href="/changyong/index6.shtml">7</a> <a href="/changyong/index7.shtml">8</a> <a href="/changyong/index8.shtml">9</a>  <a href="/changyong/index9.shtml">10</a> <a href="/changyong/index10.shtml">11</a> <a href="/changyong/index11.shtml">12</a>
+<a href="/changyong/index12.shtml">13</a>
+<a href="/changyong/index13.shtml">14</a>
+<a href="/changyong/index14.shtml">15</a>
+<a href="/changyong/index15.shtml">16</a>
+<a href="/changyong/index16.shtml">17</a>
+<a href="/changyong/index17.shtml">18</a>
+<a href="/changyong/index18.shtml">19</a>
+<a href="/changyong/index19.shtml">20</a>
+<a href="/changyong/index20.shtml">21</a>
+<a href="/changyong/index21.shtml">22</a>
+<a href="/changyong/index21.shtml">23</a>
+</div><div class="wrapper">
+
+<div class="wrapper">
+<h2 class="friendLink">
+    <span class="ft14">俗语歇后语大全</span>
+</h2>
+<div class="linkCon borderLr col69">
+
+为了方便广大网友学校俗语,积累俗语方面的知识，本站收集了所以有关桥的俗语,英语俗语，关于母爱的俗语，关于长城的俗语
+描写自然风光的俗语，雨的俗语，家乡俗语，三国俗语等等,希望你们能从本站查到自己想要的内容，本站所有内容均是网上收集后进行了修正和注释，如要转载请注明出处。<a href="www.1617c.com">www.1617c.com</a>。
+
+</div>
+<p class="monthDown"></p>
+</div>
+
+
+
+<div class="hr_10"></div>
+
+<div class="wrapper" id="footer">
+    <p ><a href="/">民间俗语</a> - <a href="/suyu/index9.html">地方俗语</a> <a href="/suyu/changyong.shtml">常用俗语的意思</a></p>
+    <p><a href="http://www.miibeian.gov.cn/" target="_blank">湘ICP备10204255号-1 </a> 湖南省公安局长沙分局备案编号：34301081270</p>
+    <p>俗语大全版权所有Copyright&#169;2008-2013 www.1617c.com All Rights Reserved.<script language="javascript" type="text/javascript" src="http://js.users.51.la/16696183.js"></script>
+<noscript><a href="http://www.51.la/?16696183" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/16696183.asp" style="border:none" /></a></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47901952-1', '1617c.com');
+  ga('send', 'pageview');
+
+</script>
+</p>
+</div>
+
+</div></body>
+</html>

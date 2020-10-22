@@ -1,0 +1,258 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>俗语大全1</title>
+    <meta name="keywords" content="俗语大全">
+    <meta name="Description" content="俗语大全,家乡俗语汇总"><link href='/css/base.css' type='text/css' rel='stylesheet' />
+<link href='/css/main.css' type='text/css' rel='stylesheet' />
+<link href='/css/detail.css' type='text/css' rel='stylesheet' />
+<link href='/css/nav.css' type='text/css' rel='stylesheet' />
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/cycommon.js"></script></head>
+  <body class="index"><div class="wrapper" id="header">
+	<div class="logoArea1" style="display:none">
+
+     </div>
+    <div class="hr_10"></div>
+    <div class="navbox_new">
+    	<div id="tag_nav" class="tag_nav">
+        	<span class="tag_nav_1" onMouseDown="changecurclass('0');"><a href="/">俗语大全</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('1');"><a href="/changyong/">常用俗语</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('2');"><a href="/changyong/index4.shtml">英语俗语</a></span>
+            <span class="tag_nav_1" onMouseDown="changecurclass('3');"><a href="http://www.trueloveshop.cn/xiehouyu/shengxiao.shtml" rel="nofollow">十二生肖歇后语</a></span>
+			<span class="tag_nav_1" onMouseDown="changecurclass('4');"><a href="http://www.trueloveshop.cn/chengyugushi/" rel="nofollow">成语故事</a></span>
+        </div>
+        <div class="morelink" id="nav_con">
+        	<div>
+                <ul>
+                	<li>
+					<span class="nav_hot">热门俗语</span>
+                      <a href="/suyu/index1.shtml">家乡俗语汇总</a>
+					  <a href="/suyu/index2.shtml">关于母爱的俗语</a>
+					  <a href="/suyu/index3.shtml">描写自然风光的俗语</a>
+					  <a href="/suyu/index6.shtml">有关桥的俗语汇总</a>
+					  <a href="/suyu/index7.shtml">民间俗语</a>
+                      <a href="/suyu/index8.shtml">地方俗语</a>
+                      <a href="/suyu/index4.shtml">俗语歇后语大全</a>
+                      <a href="/suyu/index5.shtml">民间桥的俗语累积</a>
+                    </li>
+                </ul>　　　  　　
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hr_10"></div>
+
+
+<script type="text/javascript">
+    /// <reference path="/js/jquery-1.7.2.min.js" />
+
+    (function ($) {
+        $.fn.hoverDelay = function (fnOver, fnOut, timeIn, timeOut) {
+
+            var timeIn = timeIn || 300,
+                    timeOut = timeOut || 300,
+                    fnOut = fnOut || fnOver;
+
+            var inTimer = [], outTimer = [];
+
+            return this.each(function (i) {
+                $(this).mouseenter(function () {
+                    var that = this;
+                    clearTimeout(outTimer[i]);
+                    inTimer[i] = setTimeout(function () {
+                        fnOver.apply(that);
+                    }, timeIn);
+                }).mouseleave(function () {
+                    var that = this;
+                    clearTimeout(inTimer[i]);
+                    outTimer[i] = setTimeout(function () {
+                        fnOut.apply(that)
+                    }, timeOut);
+                });
+            })
+        };
+
+    })(jQuery);
+
+    function navTabs(tabTit2, tabCon2, on2) {
+        var _on = $(tabTit2).find('.' + on2);
+        var _i = $(tabTit2).children('span').index(_on[0]);
+        $(tabCon2).each(function () {
+            $(this).children('div').eq(_i).show();
+        });
+        $(tabTit2).children('span').hoverDelay(
+              function () {
+                  $(this).addClass(on2).siblings('span').removeClass(on2);
+                  var index = jQuery(tabTit2).children('span').index(this);
+                  $(tabCon2).children('div').eq(index).show('slow').siblings('div').hide('slow');
+
+              },
+            function () {
+
+            });
+          };
+          function changecurclass(i) {
+              $.Cookies.set("curindex", i);
+          }
+          function initcurclass() {
+              var cur = $.Cookies.get("curindex");
+              if (cur == null) {
+                  cur = 0;
+              }
+              else {
+                  cur = parseInt(cur);
+              }
+
+              $("#tag_nav span:eq(" + cur + ")").attr("class", "tag_nav_2");
+
+        }
+          initcurclass();
+          navTabs('#tag_nav', '#nav_con', 'tag_nav_2');
+</script><div class="wrapper">
+      <div id="homead" class="gkst_box"><div class="adbox">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 970x90x文字 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-8159566632417729"
+     data-ad-slot="4285006608"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+    </div>
+    <div class="hr_10"></div>
+    <div class="wrapper">
+      <h2 id="itemtitle" class="columnTit"><small class="right colf24118">
+          更多&gt;&gt;<a href="/suyu/">俗语</a></small><em id="moretxt" class="right clearfix col666"></em><span class="cye white"><b class="columnTitNav2_l left"></b><i class="columnTitNav2_m left"><a href="/">俗语大全</a></i><b class="columnTitNav2_r left"></b></span></h2>
+      <div class="left topMargin1">
+        <div id="listitems" class="borderLr znCon ffCon clearfix">
+          <ul class="clearfix listIcon2 col666">
+            <li><a href="/suyu/2.shtml">矮子肚里疮播多</a></li>
+            <li><a href="/suyu/3.shtml">矮子看戏何曾见，都是随人说短长</a></li>
+            <li><a href="/suyu/4.shtml">爱他的，着他的</a></li>
+            <li><a href="/suyu/5.shtml">爱在心里，狠在面皮</a></li>
+            <li><a href="/suyu/1533.shtml">坐山观虎斗</a></li>
+            <li><a href="/suyu/6.shtml">爱之深,恨之切</a></li>
+            <li><a href="/suyu/7.shtml">按倒菊芦瓢起来</a></li>
+            <li><a href="/suyu/8.shtml">按定坐金里</a></li>
+            <li><a href="/suyu/9.shtml">按牛头吃不得草</a></li>
+            <li><a href="/suyu/10.shtml">按蕃南芦枢子儿</a></li>
+            <li><a href="/suyu/11.shtml">暗里来，暗里去</a></li>
+            <li><a href="/suyu/12.shtml">八病九痛</a></li>
+            <li><a href="/suyu/13.shtml">八寸三分相子话</a></li>
+            <li><a href="/suyu/14.shtml">八九不离十</a></li>
+            <li><a href="/suyu/15.shtml">八人轿也抬不出去</a></li>
+            <li><a href="/suyu/16.shtml"></a></li>
+            <li><a href="/suyu/17.shtml">八哥嘴巧过不了濂关</a></li>
+            <li><a href="/suyu/18.shtml">八字没一撇</a></li>
+            <li><a href="/suyu/19.shtml">拔出萝卜带出泥</a></li>
+            <li><a href="/suyu/20.shtml">拔出膝来，才是好裔药</a></li>
+            <li><a href="/suyu/21.shtml">拔出眼中钉，除却心头病</a></li>
+            <li><a href="/suyu/22.shtml">拔尖要拔头尖</a></li>
+            <li><a href="/suyu/23.shtml">拔了萝卜地皮宽</a></li>
+            <li><a href="/suyu/24.shtml">拔了毛的凤凰不如难</a></li>
+            <li><a href="/suyu/25.shtml">把别人家的棺材拉在自己门口哭</a></li>
+            <li><a href="/suyu/26.shtml">把吃奶的劲都使出来了</a></li>
+            <li><a href="/suyu/27.shtml">把好心当做妒肝肺</a></li>
+            <li><a href="/suyu/28.shtml">把黄牛当马猜</a></li>
+            <li><a href="/suyu/29.shtml">把送镇的埋在坟里</a></li>
+            <li><a href="/suyu/30.shtml">把羞脸儿揣在怀里</a></li>
+            <li><a href="/suyu/31.shtml">白刀子进去，红刀子出来</a></li>
+            <li><a href="/suyu/32.shtml">白发故人稀</a></li>
+            <li><a href="/suyu/33.shtml">白酒红人面，黄金黑世心</a></li>
+            <li><a href="/suyu/34.shtml">白日不做亏心事，夜半敲门心不惊</a></li>
+            <li><a href="/suyu/35.shtml">白日便见簸箕星</a></li>
+            <li><a href="/suyu/36.shtml">白日见鬼</a></li>
+            <li><a href="/suyu/37.shtml">白曰奠闲过，育春不再来</a></li>
+            <li><a href="/suyu/38.shtml">白铁刀，转口快</a></li>
+            <li><a href="/suyu/39.shtml">白头如新，倾盖如故</a></li>
+            <li><a href="/suyu/40.shtml">白衣登三公</a></li>
+            <li><a href="/suyu/41.shtml">白纸黑字</a></li>
+            <li><a href="/suyu/42.shtml">百不为多，一不为少</a></li>
+            <li><a href="/suyu/43.shtml"></a></li>
+            <li><a href="/suyu/44.shtml">百家姓不曾开簿面</a></li>
+            <li><a href="/suyu/45.shtml"></a></li>
+            <li><a href="/suyu/46.shtml">百里不同风•十里改规矩</a></li>
+            <li><a href="/suyu/47.shtml">百密总有一班</a></li>
+            <li><a href="/suyu/48.shtml">百巧不如一拙</a></li>
+            <li><a href="/suyu/49.shtml">百岁光阴如过客</a></li>
+            <li><a href="/suyu/50.shtml">百万豪家一培穷</a></li>
+            <li><a href="/suyu/51.shtml">百姓百样性</a></li>
+            <li><a href="/suyu/52.shtml">百羊之皮，不如一狐之腋</a></li>
+            <li><a href="/suyu/53.shtml">百样米养百样人</a></li>
+            <li><a href="/suyu/54.shtml">百艺通，不如一艺精</a></li>
+            <li><a href="/suyu/55.shtml">播迷魂阵</a></li>
+            <li><a href="/suyu/56.shtml">敗军之将不言勇</a></li>
+            <li><a href="/suyu/57.shtml">敗军之将，不足以图存</a></li>
+            <li><a href="/suyu/58.shtml">敗棋有胜着</a></li>
+            <li><a href="/suyu/59.shtml">拜佛只拜一尊</a></li>
+            <li><a href="/suyu/60.shtml">搬石头砸自己的脚</a></li>
+            <li><a href="/suyu/61.shtml">半截身子入土</a></li>
+            <li><a href="/suyu/62.shtml">半顿强似断顿</a></li>
+            <li><a href="/suyu/63.shtml">半斤对八两</a></li>
+            <li><a href="/suyu/64.shtml">半路出家</a></li>
+            <li><a href="/suyu/65.shtml">半路杀出个程咬金</a></li>
+            <li><a href="/suyu/66.shtml">半夜里拾金宝</a></li>
+            <li><a href="/suyu/67.shtml">半由天子半由臣</a></li>
+            <li><a href="/suyu/68.shtml">伴君如伴虎</a></li>
+            <li><a href="/suyu/69.shtml">绅人的粧不在离</a></li>
+            <li><a href="/suyu/70.shtml">帮虎吃食</a></li>
+            <li><a href="/suyu/71.shtml"></a></li>
+            <li><a href="/suyu/72.shtml">棒头出孝子</a></li>
+            <li><a href="/suyu/73.shtml">傍生不如傍熟</a></li>
+            <li><a href="/suyu/74.shtml">包子有肉不在福上</a></li>
+            <li><a href="/suyu/75.shtml">宝剑赠与烈士，红粉赠与佳人</a></li>
+            <li><a href="/suyu/76.shtml">饱汉不知饿汉饥</a></li>
+            <li><a href="/suyu/77.shtml">饱暖生闲事•饥寒发盗心</a></li>
+            <li><a href="/suyu/78.shtml">抱著賊秀叫菩萨</a></li>
+            <li><a href="/suyu/79.shtml">背地商置无好话，私房计较有奸情</a></li>
+            <li><a href="/suyu/80.shtml">背着抱着一般重</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="hr_10"></div><div> </div><div class="wrapper">
+
+<div class="wrapper">
+<h2 class="friendLink">
+    <span class="ft14">俗语歇后语大全</span>
+</h2>
+<div class="linkCon borderLr col69">
+
+为了方便广大网友学校俗语,积累俗语方面的知识，本站收集了所以有关桥的俗语,英语俗语，关于母爱的俗语，关于长城的俗语
+描写自然风光的俗语，雨的俗语，家乡俗语，三国俗语等等,希望你们能从本站查到自己想要的内容，本站所有内容均是网上收集后进行了修正和注释，如要转载请注明出处。<a href="www.1617c.com">www.1617c.com</a>。
+
+</div>
+<p class="monthDown"></p>
+</div>
+
+
+
+<div class="hr_10"></div>
+
+<div class="wrapper" id="footer">
+    <p ><a href="/">民间俗语</a> - <a href="/suyu/index9.html">地方俗语</a> <a href="/suyu/changyong.shtml">常用俗语的意思</a></p>
+    <p><a href="http://www.miibeian.gov.cn/" target="_blank">湘ICP备10204255号-1 </a> 湖南省公安局长沙分局备案编号：34301081270</p>
+    <p>俗语大全版权所有Copyright&#169;2008-2013 www.1617c.com All Rights Reserved.<script language="javascript" type="text/javascript" src="http://js.users.51.la/16696183.js"></script>
+<noscript><a href="http://www.51.la/?16696183" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/16696183.asp" style="border:none" /></a></noscript>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47901952-1', '1617c.com');
+  ga('send', 'pageview');
+
+</script>
+</p>
+</div>
+
+</div></body>
+</html>
